@@ -1,6 +1,5 @@
 gcc: error: 6_size.c: No such file or directory
-gcc: error: size32: No such file or directory
+gcc: error: 32: No such file or directory
 gcc: error: /tmp/32: No such file or directory
-gcc: error: unrecognized command line option ‘-0’
 gcc: fatal error: no input files
 compilation terminated.
