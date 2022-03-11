@@ -7,16 +7,16 @@
 
 int main(void)
 {
-char lowerCase = 'a';
+char ch = 'a';
 
-while (lowerCase <= 'z')
+while (ch <= 'z')
 {
-if (lowerCase != 'e' && lowerCase != 'q')
+if (ch != 'e' && ch != 'q')
 {
-putchar(lowerCase);
+putchar(ch);
 }
-lowerCase++;
+ch++;
 }
-putchar('/n');
+putchar('\n');
 return (0);
 }
