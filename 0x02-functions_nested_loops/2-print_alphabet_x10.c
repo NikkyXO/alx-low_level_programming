@@ -8,7 +8,7 @@
  *
  * Return: Always 0 Success
  */
-
+  
 void print_alphabet_x10(void)
 {
 	char alp = 'a';
@@ -20,10 +20,9 @@ void print_alphabet_x10(void)
 		{
 			_putchar(alp);
 		}
-		_putchar('\n);
+		_putchar('\n');
 
 		round++;
 	}
 
 }
-
