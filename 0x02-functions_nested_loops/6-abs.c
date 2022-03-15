@@ -4,20 +4,21 @@
  * _abs - A function that computes the absolute value of an integer
  *
  * Return: absolute value of integer
- * @int: int is an integer
+ * @n: int is an integer
  *
  */
 
-int _abs(int)
+int _abs(int n)
 {
+
 	if (n < 0)
 	{
-		_putchar('-');
+		return (-n);
 	}
 
 	else if (n > 0)
 	{
-		_putchar('+');
+		return (n);
 	}
 
 	else
