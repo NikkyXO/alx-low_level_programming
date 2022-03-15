@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 
 /**
- * main - A function that prints the alphabet, in lower case followed
- * by a new line
+ * 1-alphabet.c - A function that prints the alphabet, in lower case followed
+ * by a new line:
  *
  * Return: Always 0 Success
  */
