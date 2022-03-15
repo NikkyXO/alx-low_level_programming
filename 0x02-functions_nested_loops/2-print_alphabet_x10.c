@@ -11,7 +11,7 @@
 
 void print_alphabet_x10(void)
 {
-	char alp[26] = 'a';
+	char alp = 'a';
 	int round = 0;
 
 	while (round <= 10)
