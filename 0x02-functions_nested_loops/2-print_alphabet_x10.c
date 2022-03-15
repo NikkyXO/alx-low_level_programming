@@ -1,5 +1,5 @@
 #include <stdio.h>
-//#include <main.h>
+#include "main.h"
 
 /**
  * print_alphabet_x10 - A function that prints 10 times the alphabet,
@@ -11,10 +11,10 @@
 
 void print_alphabet_x10(void)
 {
-	char alp[26];
+	char alp[26] = 'a';
 	int round = 0;
 
-	while (round < 10)
+	while (round <= 10)
 	{
 		for (alp = 'a'; alp <= 'z'; alp++)
 		{
@@ -26,3 +26,4 @@ void print_alphabet_x10(void)
 	}
 
 }
+
