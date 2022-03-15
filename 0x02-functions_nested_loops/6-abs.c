@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.c"
+#include "main.h"
 /**
  * _abs - A function that computes the absolute value of an integer
  *
