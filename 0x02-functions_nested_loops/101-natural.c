@@ -20,7 +20,8 @@ int main(void)
 		if ((n % 3) == 0)
 		{
 			sum3 = sum3 + n;
-		} else if ((n % 5) == 0);
+		}
+		else if ((n % 5) == 0)
 
 		{
 
@@ -30,7 +31,7 @@ int main(void)
 	}
 
 
-	sum = sum3 + sum 5;
+	sum = sum3 + sum5;
 	printf("%lu\n", sum);
 	return (0);
 }
