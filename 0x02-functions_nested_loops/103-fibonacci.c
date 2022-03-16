@@ -18,7 +18,7 @@ int main(void)
 
 	for (n = 0; n <= 33; n++)
 	{
-		if (j < 4000000 && (j % 2) == O)
+		if (j < 4000000 && (j % 2) == 0)
 		{
 			sum = sum + j;
 
