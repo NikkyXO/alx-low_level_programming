@@ -3,9 +3,10 @@
  * print_times_table - print n number of times table starting from 0
  * @n: n number of times table Return: Always 0 Success
  */
+
 void print_times_table(int n)
 {
-	int n, i, j, k;
+	int i, j, k;
 
 	if (n >= 0 && n <= 15)
 	{
@@ -13,8 +14,8 @@ void print_times_table(int n)
 		{
 			for (j = 0; j <= n; j++)
 			{
+			
 				k = j * i;
-
 				if (j == 0)
 				{
 					_putchar(k + '0');
@@ -41,7 +42,6 @@ void print_times_table(int n)
 					_putchar((k % 10) + '0');
 				}
 			}
-
 			_putchar('\n');
 		}
 	}
