@@ -10,7 +10,7 @@
 int _isupper(int c)
 {
 
-	for (c >= 65 && c <= 90)
+	for (c > 64 && c < 91)
 
 		return (1);
 	return (0);
