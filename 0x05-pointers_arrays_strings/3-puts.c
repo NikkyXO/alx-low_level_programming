@@ -2,13 +2,11 @@
 #include <stdio.h>
 /**
  * _puts - prints a string, followed by a new line, to stdout
- *
  * @str: string
  * Return: void
  */
 
 void _puts(char *str)
-
 {
 	int i = 0;
 
@@ -18,7 +16,5 @@ void _puts(char *str)
 		i++;
 	}
 
-
 	_putchar('\n');
-
 }
