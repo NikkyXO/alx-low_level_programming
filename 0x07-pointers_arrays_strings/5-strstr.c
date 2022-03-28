@@ -22,7 +22,6 @@ char *_strstr(char *haystack, char *needle)
 	{
 		nlen++;
 	}
-
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
 		for (j = 0; j < nlen && haystack[i] == needle[j]; j++, i++)
@@ -35,11 +34,7 @@ char *_strstr(char *haystack, char *needle)
 			{
 				return (haystack + start);
 			}
-
 		}
-
 	}
-
 	return (0);
-
 }
