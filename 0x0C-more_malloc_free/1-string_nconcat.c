@@ -10,7 +10,6 @@
 int _strlen(char *string)
 {
 	int length;
-
 	length = 0;
 
 	while (string[length] != '\0')
@@ -43,13 +42,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (n >= length2)
 		len = length1 + length2 + 1;
-
 	else
 	{
 		len = length1 + n + 1;
 		length2 = n;
 	}
-
 	str = malloc(len);
 
 	if (str == NULL)
@@ -57,7 +54,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	i = 0;
 
-	while (i < length1);
+	while (i < length1)
 	{
 		i++;
 	}
