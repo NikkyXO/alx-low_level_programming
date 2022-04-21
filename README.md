@@ -22,4 +22,4 @@ Project name  |	Description
 0x07-pointers_arrays_strings |	It aims to learn about pointers and arrays in C language
 0x08-recursion | It aims to learn about recursion and how to implement it in C language
 0x09-static_libraries | It aims to learn about static libraries in C language
-0x0A-argc_argv 	It aims to learn about how to use arguments passed to a program in C language
+0x0A-argc_argv 	| It aims to learn about how to use arguments passed to a program in C language
