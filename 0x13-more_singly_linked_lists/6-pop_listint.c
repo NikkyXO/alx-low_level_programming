@@ -2,7 +2,7 @@
 
 /**
  * pop_listint - deletes head node and return node's data
- * @head: head of linked list
+ * @head: pointer to head of linked list
  * Return: node data (integer)
  */
 

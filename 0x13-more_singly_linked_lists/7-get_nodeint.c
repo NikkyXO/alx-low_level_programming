@@ -3,7 +3,7 @@
 /**
  * get_nodeint_at_index - gets the nth node of a linked list
  * @index: index of nth node
- * @head: head of list
+ * @head: pointer to head of list
  * Return: the index of the node , or NULL if it doesnt exist
  */
 
