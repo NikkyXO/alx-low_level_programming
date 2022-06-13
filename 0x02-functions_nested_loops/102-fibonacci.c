@@ -10,25 +10,24 @@
  */
 int main(void)
 {
-	long int i, j, k, next;
+	long int  a = 0,  b = 1,  next;
+	int i = 0;
 
-	j = 1;
-
-	k = 2;
-
-	for (i = 1; i <= 50; ++i)
+	while (i < 50)
 	{
-		if (j != 20365011074)
+		next = a + b;
+		a = b;
+		b = next;
 
+		printf("%lu", next);
+
+		if (i < 49)
 		{
-			printf("%ld, ", j);
-		} else
-		{
-			printf("%ld\n", j);
+
+			printf(", ");
 		}
-		next = j + k;
-		j = k;
-		k = next;
+		i++;
+		
 	}
 
 	return (0);

@@ -1,17 +1,33 @@
 #include <stdio.h>
-#include "main.h"
+
 
 int main(void)
 {
-    unsigned int n;
+    
 
-    n = flip_bits(1024, 1);
-    printf("%u\n", n);
-    n = flip_bits(402, 98);
-    printf("%u\n", n);
-    n = flip_bits(1024, 3);
-    printf("%u\n", n);
-    n = flip_bits(1024, 1025);
-    printf("%u\n", n);
+    unsigned long int  n;
+
+    unsigned int index = 6;
+
+
+     n = 10;
+
+    // for (i = 63; i >= 0; i--)
+    // {
+    //     x = (n >> i) & 1;
+
+    //     if (x == 1)
+    //         on = 1;
+    //     if (on == 1)
+    //         printf("%lu at index %d\n", (n >> i), i);
+    // }
+    // if (n == 0)
+    //     printf("%lu at index %d\n", (n >> i), i);
+
+    if (index >= (sizeof(n) * 8))
+        return (-1);
+
+    printf("%lu at index %d\n", ((n >> index) & 1), index);
+
     return (0);
 }
