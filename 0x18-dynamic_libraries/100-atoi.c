@@ -27,8 +27,6 @@ int _atoi(char *s)
 		else if (null_flag)
 			break;
 		s++;
-
-
 	}
 
 	if (sign < 0)
@@ -36,6 +34,4 @@ int _atoi(char *s)
 		total = (-total);
 
 	return (total);
-
 }
-

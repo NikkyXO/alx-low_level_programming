@@ -1,11 +1,11 @@
 #include "main.h"
 /**
-  * _strncpy - copies a string to a specified destinatiom
-  * @dest: destination
-  * @src: source
-  * @n: specified length
-  * Return: Destination
-  */
+ * _strncpy - copies a string to a specified destinatiom
+ * @dest: destination
+ * @src: source
+ * @n: specified length
+ * Return: Destination
+ */
 
 char *_strncpy(char *dest, char *src, int n)
 {
@@ -17,7 +17,6 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		dest[i] = src[i];
 		i++;
-
 	}
 
 	while (i < n)
@@ -28,4 +27,3 @@ char *_strncpy(char *dest, char *src, int n)
 
 	return (dest);
 }
-
