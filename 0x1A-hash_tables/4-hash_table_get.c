@@ -11,7 +11,7 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	hash_node_t *temp;
-	long unsigned int index = 0;
+	unsigned long int index = 0;
 
 	if (!ht || !key || ht->size == 0 || key == NULL ||
 	    strlen(key) == 0)
