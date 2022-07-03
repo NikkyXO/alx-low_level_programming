@@ -126,49 +126,51 @@ Note that all dictionaries are not implemented using hash tables and there is a 
 
     - You are allowed to copy and paste the function from this page
 
-        julien@ubuntu:~/0x1A. Hash tables$ cat 1-djb2.c 
-        unsigned long int hash_djb2(const unsigned char *str)
-        {
-            unsigned long int hash;
-            int c;
-
-            hash = 5381;
-            while ((c = *str++))
+            julien@ubuntu:~/0x1A. Hash tables$ cat 1-djb2.c 
+            unsigned long int hash_djb2(const unsigned char *str)
             {
-                hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+                unsigned long int hash;
+                int c;
+
+                hash = 5381;
+                while ((c = *str++))
+                {
+                    hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+                }
+                return (hash);
             }
-            return (hash);
-        }
-        julien@ubuntu:~/0x1A. Hash tables$ 
-        julien@ubuntu:~/0x1A. Hash tables$ cat 1-main.c 
-        #include <stdlib.h>
-        #include <string.h>
-        #include <stdio.h>
-        #include "hash_tables.h"
 
-        /**
-        * main - check the code for Holberton School students.
-        *
-        * Return: Always EXIT_SUCCESS.
-        */
-        int main(void)
-        {
-            char *s;
+            julien@ubuntu:~/0x1A. Hash tables$ 
+            julien@ubuntu:~/0x1A. Hash tables$ cat 1-main.c 
+            #include <stdlib.h>
+            #include <string.h>
+            #include <stdio.h>
+            #include "hash_tables.h"
 
-            s = "cisfun";
-            printf("%lu\n", hash_djb2((unsigned char *)s));
-            s = "Don't forget to tweet today";
-            printf("%lu\n", hash_djb2((unsigned char *)s));
-            s = "98";
-            printf("%lu\n", hash_djb2((unsigned char *)s));
-            return (EXIT_SUCCESS);
-        }
-        julien@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra 1-main.c 1-djb2.c -o b
-        julien@ubuntu:~/0x1A. Hash tables$ ./b 
-        6953392314605
-        3749890792216096085
-        5861846
-        julien@ubuntu:~/0x1A. Hash tables$ 
+            /**
+            * main - check the code for Holberton School students.
+            *
+            * Return: Always EXIT_SUCCESS.
+            */
+            int main(void)
+            {
+                char *s;
+
+                s = "cisfun";
+                printf("%lu\n", hash_djb2((unsigned char *)s));
+                s = "Don't forget to tweet today";
+                printf("%lu\n", hash_djb2((unsigned char *)s));
+                s = "98";
+                printf("%lu\n", hash_djb2((unsigned char *)s));
+                return (EXIT_SUCCESS);
+            }
+
+            julien@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra 1-main.c 1-djb2.c -o b
+            julien@ubuntu:~/0x1A. Hash tables$ ./b 
+            6953392314605
+            3749890792216096085
+            5861846
+            julien@ubuntu:~/0x1A. Hash tables$ 
 
 2. key -> index
 
@@ -397,66 +399,67 @@ dram collides with vivency
 
     - where ht is the hash table
 
-        julien@ubuntu:~/0x1A. Hash tables$ cat 6-main.c 
-        #include <stdlib.h>
-        #include <string.h>
-        #include <stdio.h>
-        #include "hash_tables.h"
+            julien@ubuntu:~/0x1A. Hash tables$ cat 6-main.c 
+            #include <stdlib.h>
+            #include <string.h>
+            #include <stdio.h>
+            #include "hash_tables.h"
 
-        /**
-        * main - check the code for Holberton School students.
-        *
-        * Return: Always EXIT_SUCCESS.
-        */
-        int main(void)
-        {
-            hash_table_t *ht;
-            char *key;
-            char *value;
+            /**
+            * main - check the code for Holberton School students.
+            *
+            * Return: Always EXIT_SUCCESS.
+            */
+            int main(void)
+            {
+                hash_table_t *ht;
+                char *key;
+                char *value;
 
-            ht = hash_table_create(1024);
-            hash_table_set(ht, "c", "fun");
-            hash_table_set(ht, "python", "awesome");
-            hash_table_set(ht, "Jennie", "and Jay love asm");
-            hash_table_set(ht, "N", "queens");
-            hash_table_set(ht, "Asterix", "Obelix");
-            hash_table_set(ht, "Betty", "Holberton");
-            hash_table_set(ht, "98", "Battery Streetz");
-            key = strdup("Tim");
-            value = strdup("Britton");
-            hash_table_set(ht, key, value);
-            key[0] = '\0';
-            value[0] = '\0';
-            free(key);
-            free(value);
-            hash_table_set(ht, "98", "Battery Street"); 
-            hash_table_set(ht, "hetairas", "Jennie");
-            hash_table_set(ht, "hetairas", "Jennie Z");
-            hash_table_set(ht, "mentioner", "Jennie");
-            hash_table_set(ht, "hetairas", "Jennie Z Chu");
-            hash_table_print(ht);
-            hash_table_delete(ht);
-            return (EXIT_SUCCESS);
-        }
+                ht = hash_table_create(1024);
+                hash_table_set(ht, "c", "fun");
+                hash_table_set(ht, "python", "awesome");
+                hash_table_set(ht, "Jennie", "and Jay love asm");
+                hash_table_set(ht, "N", "queens");
+                hash_table_set(ht, "Asterix", "Obelix");
+                hash_table_set(ht, "Betty", "Holberton");
+                hash_table_set(ht, "98", "Battery Streetz");
+                key = strdup("Tim");
+                value = strdup("Britton");
+                hash_table_set(ht, key, value);
+                key[0] = '\0';
+                value[0] = '\0';
+                free(key);
+                free(value);
+                hash_table_set(ht, "98", "Battery Street"); 
+                hash_table_set(ht, "hetairas", "Jennie");
+                hash_table_set(ht, "hetairas", "Jennie Z");
+                hash_table_set(ht, "mentioner", "Jennie");
+                hash_table_set(ht, "hetairas", "Jennie Z Chu");
+                hash_table_print(ht);
+                hash_table_delete(ht);
+                return (EXIT_SUCCESS);
+            }
 
-        julien@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra 6-main.c 0-hash_table_create.c 1-djb2.c 2-key_index.c 3-hash_table_set.c 4-hash_table_get.c 5-hash_table_print.c 6-hash_table_delete.c -o g
-        julien@ubuntu:~/0x1A. Hash tables$ valgrind ./g
-        ==6621== Memcheck, a memory error detector
-        ==6621== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
-        ==6621== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
-        ==6621== Command: ./g
-        ==6621== 
-        {'Betty': 'Holberton', 'mentioner': 'Jennie', 'hetairas': 'Jennie Z Chu', 'python': 'awesome', 'Jennie': 'and Jay love asm', '98': 'Battery Street', 'N': 'queens', 'c': 'fun', 'Tim': 'Britton', 'Asterix': 'Obelix'}
-        ==6621== 
-        ==6621== HEAP SUMMARY:
-        ==6621==     in use at exit: 0 bytes in 0 blocks
-        ==6621==   total heap usage: 37 allocs, 37 frees, 8,646 bytes allocated
-        ==6621== 
-        ==6621== All heap blocks were freed -- no leaks are possible
-        ==6621== 
-        ==6621== For counts of detected and suppressed errors, rerun with: -v
-        ==6621== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-        julien@ubuntu:~/0x1A. Hash tables$ 
+            julien@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra 6-main.c 0-hash_table_create.c 1-djb2.c 2-key_index.c 3-hash_table_set.c 4-hash_table_get.c 5-hash_table_print.c 6-hash_table_delete.c -o g
+          
+            julien@ubuntu:~/0x1A. Hash tables$ valgrind ./g
+            ==6621== Memcheck, a memory error detector
+            ==6621== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+            ==6621== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+            ==6621== Command: ./g
+            ==6621== 
+            {'Betty': 'Holberton', 'mentioner': 'Jennie', 'hetairas': 'Jennie Z Chu', 'python': 'awesome', 'Jennie': 'and Jay love asm', '98': 'Battery Street', 'N': 'queens', 'c': 'fun', 'Tim': 'Britton', 'Asterix': 'Obelix'}
+            ==6621== 
+            ==6621== HEAP SUMMARY:
+            ==6621==     in use at exit: 0 bytes in 0 blocks
+            ==6621==   total heap usage: 37 allocs, 37 frees, 8,646 bytes allocated
+            ==6621== 
+            ==6621== All heap blocks were freed -- no leaks are possible
+            ==6621== 
+            ==6621== For counts of detected and suppressed errors, rerun with: -v
+            ==6621== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+            julien@ubuntu:~/0x1A. Hash tables$ 
 
 7. $ht['Betty'] = 'Holberton'
 
